@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [MySuite]">
+  <test thread-count="2" parallel="methods" name="DemoQA(failed)">
+    <classes>
+      <class name="com.controller.BaseTest">
+        <methods>
+          <include name="verifyDragAndDrop"/>
+          <include name="verifyHoverTestCase"/>
+          <include name="releaseThreadsAndShutDown"/>
+          <include name="fillFormTestCase" invocation-numbers="0"/>
+          <include name="setReporter"/>
+          <include name="verifyAlerts" invocation-numbers="0"/>
+          <include name="setUpWebDriver"/>
+        </methods>
+      </class> <!-- com.controller.BaseTest -->
+    </classes>
+  </test> <!-- DemoQA(failed) -->
+</suite> <!-- Failed suite [MySuite] -->
