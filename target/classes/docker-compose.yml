@@ -1,0 +1,30 @@
+version: '2'
+services:
+  firefoxnode:
+    image: selenium/node-firefox-debug
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+    ports:
+      - "32772:5900"
+
+  chromenode:
+    image: selenium/node-chrome-debug
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+      NODE_MAX_SESSION: 2
+      NODE_MAX_INSTANCES: 2
+    ports:
+      - "32773:5900"
+
+  hub:
+    image: selenium/hub
+    ports:
+      - "4444:4444"

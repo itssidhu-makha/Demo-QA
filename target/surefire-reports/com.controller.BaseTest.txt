@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: com.controller.BaseTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.974 s - in com.controller.BaseTest
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 6, Time elapsed: 4.368 s <<< FAILURE! - in com.controller.BaseTest
+fillFormTestCase(com.controller.BaseTest)  Time elapsed: 3.797 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.controller.BrowserFactory.getWebDriver()" is null
+	at com.controller.BaseTest.fillPractiseForm(BaseTest.java:129)
+	at com.controller.BaseTest.fillFormTestCase(BaseTest.java:26)
+
+releaseThreadsAndShutDown(com.controller.BaseTest)  Time elapsed: 3.8 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because the return value of "com.controller.BrowserFactory.getWebDriver()" is null
+	at com.controller.BaseTest.flushReporterAndRemoveThreads(BaseTest.java:118)
+	at com.controller.BaseTest.releaseThreadsAndShutDown(BaseTest.java:105)
+

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,36 +91,45 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,  3 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Surefire_suite">
+                    <div class="method-list-content failed suite-Surefire_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="com.controller.BaseTest" class="method navigator-link" hash-for-method="fillFormTestCase(SubmitForm)">fillFormTestCase(SubmitForm)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods skipped suite-Surefire_suite"> (hide)</a> <!-- hide-methods skipped suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods skipped suite-Surefire_suite"> (show)</a> <!-- show-methods skipped suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Surefire_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.controller.BaseTest" class="method navigator-link" hash-for-method="verifyAlerts(ALERTCHECK)">verifyAlerts(ALERTCHECK)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.controller.BaseTest" class="method navigator-link" hash-for-method="verifyAlerts">verifyAlerts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.controller.BaseTest" class="method navigator-link" hash-for-method="verifyDragAndDrop(DRAGDROP)">verifyDragAndDrop(DRAGDROP)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.controller.BaseTest" class="method navigator-link" hash-for-method="verifyDragAndDrop">verifyDragAndDrop</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.controller.BaseTest" class="method navigator-link" hash-for-method="verifyHoverTestCase(HOVERCHECK)">verifyHoverTestCase(HOVERCHECK)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="com.controller.BaseTest" class="method navigator-link" hash-for-method="verifyHoverTestCase">verifyHoverTestCase</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                    </div> <!-- method-list-content skipped suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -132,9 +141,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.controller.BaseTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -144,42 +153,71 @@
                   </a> <!-- fillFormTestCase(SubmitForm) -->
                   <span class="method-name">fillFormTestCase</span>
                   <span class="parameters">(SubmitForm)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;com.controller.BrowserFactory.getWebDriver()&quot; is null
+	at com.controller.BaseTest.fillPractiseForm(BaseTest.java:129)
+	at com.controller.BaseTest.fillFormTestCase(BaseTest.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Dynamic test Builder)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.controller.BaseTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAlerts(ALERTCHECK)">
-                  </a> <!-- verifyAlerts(ALERTCHECK) -->
+                  <a name="verifyAlerts">
+                  </a> <!-- verifyAlerts -->
                   <span class="method-name">verifyAlerts</span>
-                  <span class="parameters">(ALERTCHECK)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because the return value of &quot;com.controller.BrowserFactory.getWebDriver()&quot; is null
+	at com.controller.BaseTest.flushReporterAndRemoveThreads(BaseTest.java:118)
+	at com.controller.BaseTest.releaseThreadsAndShutDown(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Accept Alerts)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyDragAndDrop(DRAGDROP)">
-                  </a> <!-- verifyDragAndDrop(DRAGDROP) -->
+                  <a name="verifyDragAndDrop">
+                  </a> <!-- verifyDragAndDrop -->
                   <span class="method-name">verifyDragAndDrop</span>
-                  <span class="parameters">(DRAGDROP)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because the return value of &quot;com.controller.BrowserFactory.getWebDriver()&quot; is null
+	at com.controller.BaseTest.flushReporterAndRemoveThreads(BaseTest.java:118)
+	at com.controller.BaseTest.releaseThreadsAndShutDown(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Verify Drag and Drop)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyHoverTestCase(HOVERCHECK)">
-                  </a> <!-- verifyHoverTestCase(HOVERCHECK) -->
+                  <a name="verifyHoverTestCase">
+                  </a> <!-- verifyHoverTestCase -->
                   <span class="method-name">verifyHoverTestCase</span>
-                  <span class="parameters">(HOVERCHECK)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because the return value of &quot;com.controller.BrowserFactory.getWebDriver()&quot; is null
+	at com.controller.BaseTest.flushReporterAndRemoveThreads(BaseTest.java:118)
+	at com.controller.BaseTest.releaseThreadsAndShutDown(BaseTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (verify Hovers)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -233,26 +271,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyAlerts')
+data.setCell(0, 1, 'fillFormTestCase')
 data.setCell(0, 2, 'com.controller.BaseTest')
-data.setCell(0, 3, 8870);
+data.setCell(0, 3, 3740);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'fillFormTestCase')
+data.setCell(1, 1, 'verifyAlerts')
 data.setCell(1, 2, 'com.controller.BaseTest')
-data.setCell(1, 3, 7907);
+data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyHoverTestCase')
 data.setCell(2, 2, 'com.controller.BaseTest')
-data.setCell(2, 3, 7871);
+data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verifyDragAndDrop')
 data.setCell(3, 2, 'com.controller.BaseTest')
-data.setCell(3, 3, 3821);
+data.setCell(3, 3, 0);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -280,36 +318,40 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.controller.BaseTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">fillFormTestCase(SubmitForm)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">releaseThreadsAndShutDown</span>
-                <span class="method-start">7920 ms</span>
+                <span class="method-start">3758 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">verifyAlerts(ALERTCHECK)</span>
-                <span class="method-start">9577 ms</span>
+                <span class="method-name">verifyAlerts</span>
+                <span class="method-start">3768 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">releaseThreadsAndShutDown</span>
-                <span class="method-start">18450 ms</span>
+                <span class="method-start">3768 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">verifyDragAndDrop(DRAGDROP)</span>
-                <span class="method-start">19224 ms</span>
+                <span class="method-name">verifyDragAndDrop</span>
+                <span class="method-start">3770 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">releaseThreadsAndShutDown</span>
-                <span class="method-start">23045 ms</span>
+                <span class="method-start">3770 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">verifyHoverTestCase(HOVERCHECK)</span>
-                <span class="method-start">23852 ms</span>
+                <span class="method-name">verifyHoverTestCase</span>
+                <span class="method-start">3772 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">releaseThreadsAndShutDown</span>
-                <span class="method-start">31723 ms</span>
+                <span class="method-start">3772 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

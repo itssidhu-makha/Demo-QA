@@ -6,3 +6,5 @@
 5. Extent Reports can be accessed from "..\DemoQA\src\main\resources\reports"
 6. For every test case a new report will be created
 7. Data sets for test cases are available under "..DemoQA\src\main\resources\datas"
+8. It has inbuilt Docker support to bring up the containers using yaml file
+9. We can use VNC Viewer or run via Zalenium containers to see the actual execution happening in real time

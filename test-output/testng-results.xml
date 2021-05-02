@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-05-01T23:55:00 BST" name="MySuite" finished-at="2021-05-01T23:55:20 BST" duration-ms="19877">
+  <suite started-at="2021-05-02T17:30:30 BST" name="MySuite" finished-at="2021-05-02T17:30:53 BST" duration-ms="23392">
     <groups>
     </groups>
-    <test started-at="2021-05-01T23:55:00 BST" name="DemoQA" finished-at="2021-05-01T23:55:20 BST" duration-ms="19877">
+    <test started-at="2021-05-02T17:30:30 BST" name="DemoQA" finished-at="2021-05-02T17:30:53 BST" duration-ms="23392">
       <class name="com.controller.BaseTest">
-        <test-method signature="fillFormTestCase(java.lang.String)[pri:0, instance:com.controller.BaseTest@34129c78]" started-at="2021-05-01T23:55:01 BST" name="fillFormTestCase" description="Dynamic test Builder" data-provider="formData" finished-at="2021-05-01T23:55:08 BST" duration-ms="7961" status="PASS">
+        <test-method signature="fillFormTestCase(java.lang.String)[pri:0, instance:com.controller.BaseTest@638ef7ed]" started-at="2021-05-02T17:30:30 BST" name="fillFormTestCase" description="Dynamic test Builder" data-provider="formData" finished-at="2021-05-02T17:30:42 BST" duration-ms="11824" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillFormTestCase -->
-        <test-method signature="verifyAlerts(java.lang.String)[pri:0, instance:com.controller.BaseTest@34129c78]" started-at="2021-05-01T23:55:01 BST" name="verifyAlerts" description="Accept Alerts" data-provider="alerts" finished-at="2021-05-01T23:55:11 BST" duration-ms="10268" status="PASS">
+        <test-method signature="verifyAlerts(java.lang.String)[pri:0, instance:com.controller.BaseTest@638ef7ed]" started-at="2021-05-02T17:30:30 BST" name="verifyAlerts" description="Accept Alerts" data-provider="alerts" finished-at="2021-05-02T17:30:42 BST" duration-ms="12561" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,11 +29,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAlerts -->
-        <test-method is-config="true" signature="releaseThreadsAndShutDown()[pri:0, instance:com.controller.BaseTest@34129c78]" started-at="2021-05-01T23:55:08 BST" name="releaseThreadsAndShutDown" finished-at="2021-05-01T23:55:10 BST" duration-ms="1006" status="PASS">
+        <test-method is-config="true" signature="releaseThreadsAndShutDown()[pri:0, instance:com.controller.BaseTest@638ef7ed]" started-at="2021-05-02T17:30:42 BST" name="releaseThreadsAndShutDown" finished-at="2021-05-02T17:30:44 BST" duration-ms="1780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- releaseThreadsAndShutDown -->
-        <test-method signature="verifyDragAndDrop(java.lang.String)[pri:0, instance:com.controller.BaseTest@34129c78]" started-at="2021-05-01T23:55:10 BST" name="verifyDragAndDrop" description="Verify Drag and Drop" data-provider="dragdrop" finished-at="2021-05-01T23:55:13 BST" duration-ms="3878" status="PASS">
+        <test-method is-config="true" signature="releaseThreadsAndShutDown()[pri:0, instance:com.controller.BaseTest@638ef7ed]" started-at="2021-05-02T17:30:42 BST" name="releaseThreadsAndShutDown" finished-at="2021-05-02T17:30:44 BST" duration-ms="1255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- releaseThreadsAndShutDown -->
+        <test-method signature="verifyDragAndDrop(java.lang.String)[pri:0, instance:com.controller.BaseTest@638ef7ed]" started-at="2021-05-02T17:30:44 BST" name="verifyDragAndDrop" description="Verify Drag and Drop" data-provider="dragdrop" finished-at="2021-05-02T17:30:48 BST" duration-ms="4714" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -44,11 +48,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDragAndDrop -->
-        <test-method is-config="true" signature="releaseThreadsAndShutDown()[pri:0, instance:com.controller.BaseTest@34129c78]" started-at="2021-05-01T23:55:11 BST" name="releaseThreadsAndShutDown" finished-at="2021-05-01T23:55:12 BST" duration-ms="973" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- releaseThreadsAndShutDown -->
-        <test-method signature="verifyHoverTestCase(java.lang.String)[pri:0, instance:com.controller.BaseTest@34129c78]" started-at="2021-05-01T23:55:12 BST" name="verifyHoverTestCase" description="verify Hovers" data-provider="hovers" finished-at="2021-05-01T23:55:19 BST" duration-ms="7668" status="PASS">
+        <test-method signature="verifyHoverTestCase(java.lang.String)[pri:0, instance:com.controller.BaseTest@638ef7ed]" started-at="2021-05-02T17:30:44 BST" name="verifyHoverTestCase" description="verify Hovers" data-provider="hovers" finished-at="2021-05-02T17:30:52 BST" duration-ms="8763" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,11 +59,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHoverTestCase -->
-        <test-method is-config="true" signature="releaseThreadsAndShutDown()[pri:0, instance:com.controller.BaseTest@34129c78]" started-at="2021-05-01T23:55:13 BST" name="releaseThreadsAndShutDown" finished-at="2021-05-01T23:55:14 BST" duration-ms="886" status="PASS">
+        <test-method is-config="true" signature="releaseThreadsAndShutDown()[pri:0, instance:com.controller.BaseTest@638ef7ed]" started-at="2021-05-02T17:30:48 BST" name="releaseThreadsAndShutDown" finished-at="2021-05-02T17:30:49 BST" duration-ms="890" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- releaseThreadsAndShutDown -->
-        <test-method is-config="true" signature="releaseThreadsAndShutDown()[pri:0, instance:com.controller.BaseTest@34129c78]" started-at="2021-05-01T23:55:19 BST" name="releaseThreadsAndShutDown" finished-at="2021-05-01T23:55:20 BST" duration-ms="903" status="PASS">
+        <test-method is-config="true" signature="releaseThreadsAndShutDown()[pri:0, instance:com.controller.BaseTest@638ef7ed]" started-at="2021-05-02T17:30:52 BST" name="releaseThreadsAndShutDown" finished-at="2021-05-02T17:30:53 BST" duration-ms="738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- releaseThreadsAndShutDown -->

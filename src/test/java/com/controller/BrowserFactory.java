@@ -51,8 +51,16 @@ public class BrowserFactory {
             MutableCapabilities chrome= new MutableCapabilities();
             if(Runner.gridDockerExecution){
                 //in this mode, you will need VNC viewer to visualise your test runs
+                ChromeOptions options= new ChromeOptions();
+                options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                options.addArguments("start-maximized"); // open Browser in maximized mode
+                options.addArguments("disable-infobars"); // disabling infobars
+                options.addArguments("--disable-extensions"); // disabling extensions
+                options.addArguments("--disable-gpu"); // applicable to windows os only
+                options.addArguments("--no-sandbox"); // Bypass OS security model
                 chrome.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
-                remoteWebDriver.set(new RemoteWebDriver(new URL("http://127.0.0.1:63984/wd/hub"),chrome));
+                chrome.setCapability(ChromeOptions.CAPABILITY, options);
+                remoteWebDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chrome));
             }else if(Runner.sauceLab){
                 String sauceUserName = System.getenv("SAUCE_USERNAME");
                 String sauceAccessKey = System.getenv("SAUCE_ACCESS_KEY");
